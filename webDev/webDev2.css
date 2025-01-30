@@ -4,7 +4,7 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	margin: 0;
-    background-color: bisque;
+    background-color: rgb(201, 255, 196);
 	overflow: hidden;
 }
 
@@ -17,7 +17,7 @@ body {
 .center {
 	width: 30px;
 	height: 30px;
-	background: orange;
+	background: rgb(240, 168, 36);
 	border-radius: 50%;
 	position: absolute;
 	top: 50%;
