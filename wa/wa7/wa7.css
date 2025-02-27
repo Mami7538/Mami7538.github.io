@@ -2,7 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: #8ACE00;
 }
 nav{
     height: 50vh;
@@ -10,20 +10,25 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     height:20px;
-    background-color: blueviolet;
+    background-color: black;
 }
 nav a{
+    font-family:'Arial';
     width:10vw;
     text-align: center;
     text-decoration: none;
-    color:black;
+    color:white;
 }
 
 
 img{
     width:30vw;
-    height: 30vh;
+    height: 60vh;
+    transition: transform 0.5s ease-in-out;
 }
+img:hover {
+    transform: rotate(360deg);
+  }
 
 #red-ball{
     background-color: crimson;
@@ -33,4 +38,16 @@ img{
     position: absolute;
     left:5vw;
     top:0;
+    animation: move-across 3s linear infinite alternate;
+}
+@keyframes move-across {
+    from {
+        left: 5vw;
+    }
+    to {
+        left: 90vw;
+    }
+}
+h1{
+    font-family:'Arial';
 }
