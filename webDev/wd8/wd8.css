@@ -1,0 +1,92 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: light-dark(#8ACE00, #000);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+body::before {
+    --size: 45px;
+    --line: color-mix(in hsl, canvasText, transparent 70%);
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: linear-gradient(
+          90deg,
+          var(--line) 1px,
+          transparent 1px var(--size)
+        )
+        50% 50% / var(--size) var(--size),
+      linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% /
+        var(--size) var(--size);
+    mask: linear-gradient(-20deg, transparent 50%, white);
+    top: 0;
+    transform-style: flat;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: black;
+}
+nav a{
+    font-family:'Arial';
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:white;
+}
+
+
+img{
+    width:30vw;
+    height: 60vh;
+    transition: transform 0.5s ease-in-out;
+    --s: 80px; /* corner size */
+  padding: 15px; /* the gap */
+  border: 20px solid #def2b5;
+  mask:
+    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+     0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+    conic-gradient(#000 0 0) content-box;
+}
+img:hover {
+    transform: rotate(360deg);
+  }
+
+#red-ball{
+    background-color: crimson;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+    animation: move-across 3s linear infinite alternate;
+    --s: 80px; /* corner size */
+  padding: 15px; /* the gap */
+  border: 20px solid rgb(222, 104, 128);
+  mask:
+    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+     0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+    conic-gradient(#000 0 0) content-box;
+}
+@keyframes move-across {
+    from {
+        left: 5vw;
+    }
+    to {
+        left: 90vw;
+    }
+}
+h1{
+    font-family:'Arial';
+}
