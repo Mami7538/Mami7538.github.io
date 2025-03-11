@@ -1,0 +1,299 @@
+nav{
+    position: sticky;
+    top: 0;
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100px;
+    background-color: #00c9a7;
+    font-size: xx-large;
+    border-radius: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style:initial;
+    letter-spacing: 5px;
+    text-justify: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
+    box-shadow: 0 0 20px #00c9a7;
+} 
+body{
+    background-color: rgb(255, 255, 255);
+    background-image: url("backgroundPattern.png");
+
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-size: xx-large;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease-in-out;
+
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.concert1 {
+    align-self: flex-start;
+    width: 60%;
+    background-color: #fbeaff;
+    padding: 50px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #b39cd0;
+    animation: fadeIn 2s ease-in-out;
+}
+.concert1:hover {
+    background-color: #b39cd0;
+    box-shadow: 0 0 20px #ffffff;
+}
+.concert1 h3{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert1 p strong{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert1 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+.concert2 {
+    align-self: flex-end;
+    width: 60%;
+    background-color: #fbeaff;
+    padding: 50px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #b39cd0;
+    animation: fadeIn 2s ease-in-out;
+}
+.concert2:hover {
+    background-color: #b39cd0;
+    box-shadow: 0 0 20px #ffffff;
+}
+.concert2 h3{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert2 p strong{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert2 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.concert3 {
+    align-self: flex-start;
+    width: 60%;
+    background-color: #fbeaff;
+    padding: 50px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #b39cd0;
+    animation: fadeIn 2s ease-in-out;
+}
+.concert3:hover {
+    background-color: #b39cd0;
+    box-shadow: 0 0 20px #ffffff;
+}
+.concert3 h3{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert3 p strong{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert3 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.concert4 {
+    align-self: flex-end;
+    width: 60%;
+    background-color: #fbeaff;
+    padding: 50px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #b39cd0;
+    animation: fadeIn 2s ease-in-out;
+}
+.concert4:hover {
+    background-color: #b39cd0;
+    box-shadow: 0 0 20px #ffffff;
+}
+.concert4 h3{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert4 p strong{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert4 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.concert5 {
+    align-self: flex-start;
+    width: 60%;
+    background-color: #fbeaff;
+    padding: 50px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #b39cd0;
+    animation: fadeIn 2s ease-in-out;
+}
+.concert5:hover {
+    background-color: #b39cd0;
+    box-shadow: 0 0 20px #ffffff;
+}
+.concert5 h3{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert5 p strong{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert5 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.concert6 {
+    align-self: flex-end;
+    width: 60%;
+    background-color: #fbeaff;
+    padding: 50px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #b39cd0;
+    animation: fadeIn 2s ease-in-out;
+}
+.concert6:hover {
+    background-color: #b39cd0;
+    box-shadow: 0 0 20px #ffffff;
+}
+.concert6 h3{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert6 p strong{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert6 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.concert7 {
+    align-self: flex-start;
+    width: 60%;
+    background-color: #fbeaff;
+    padding: 50px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #b39cd0;
+    animation: fadeIn 2s ease-in-out;
+}
+.concert7:hover {
+    background-color: #b39cd0;
+    box-shadow: 0 0 20px #ffffff;
+}
+.concert7 h3{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert7 p strong{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert7 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.concert8 {
+    align-self: flex-end;
+    width: 60%;
+    background-color: #fbeaff;
+    padding: 50px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #b39cd0;
+    animation: fadeIn 2s ease-in-out;
+}
+.concert8:hover {
+    background-color: #b39cd0;
+    box-shadow: 0 0 20px #ffffff;
+}
+.concert8 h3{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert8 p strong{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert8 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.concert9 {
+    align-self: flex-start;
+    width: 60%;
+    background-color: #fbeaff;
+    padding: 50px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #b39cd0;
+    animation: fadeIn 2s ease-in-out;
+}
+.concert9:hover {
+    background-color: #b39cd0;
+    box-shadow: 0 0 20px #ffffff;
+}
+.concert9 h3{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert9 p strong{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert9 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.concert10 {
+    align-self: flex-end;
+    width: 60%;
+    background-color: #fbeaff;
+    padding: 50px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #b39cd0;
+    animation: fadeIn 2s ease-in-out;
+}
+.concert10:hover {
+    background-color: #b39cd0;
+    box-shadow: 0 0 20px #ffffff;
+}
+.concert10 h3{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert10 p strong{
+    font-family:'Courier New', Courier, monospace;
+}
+.concert10 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#toTopButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: 2px solid white;
+    background-color: #00c9a7;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#toTopButton:hover {
+    background-color: grey;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
