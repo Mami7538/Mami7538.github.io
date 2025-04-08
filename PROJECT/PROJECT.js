@@ -40,3 +40,4 @@ btn.addEventListener('click', () => {
       displayedImage.style.border = '10px solid black';
     }
   });
+/*WEB DEv*/
