@@ -1,0 +1,100 @@
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url('./bobsburgersbackground.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: 'Comic Sans MS', cursive;
+  min-height: 100vh;
+}
+.app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background-color: white;
+  border-radius: 5px;
+}
+header {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #ebebeb;
+}
+.quotes {
+  padding: 20px 50px;
+  min-height: 200px;
+}
+.quote-text {
+  padding-bottom: 20px;
+  font-size: 25px;
+  color: black;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 50px;
+  gap: 15px; 
+}
+.button {
+  width: 80%; 
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.new-quote {
+  background-color: #f0262a;
+}
+
+.new-quote:hover {
+  background-color: #f06a6c;
+}
+.button:hover {
+  opacity: 0.9;
+}
+footer {
+  text-align: center;
+  padding: 20px 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+}
+.extension-description {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+@media screen and (max-width: 600px) {
+  .app {
+    width: 90%;
+  }
+  .quote-text {
+    font-size: 18px;
+  }
+}
+#js-toggle-details {
+  background-color: #9ac7e8;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 80%;
+}
+
+#js-toggle-details:hover {
+  background-color: #7db3d4;
+}
