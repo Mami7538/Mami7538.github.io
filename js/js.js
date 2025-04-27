@@ -39,7 +39,7 @@ function createInput() {
       if (digitsEntered < totalDigits) {
         showPuzzle();
       } else {
-        alert("Thanks! Your number has been (badly) entered!");
+        alert("Thank you! Your phone number has been entered!");
       }
     }
   });
