@@ -1,73 +1,174 @@
 body {
-    height: 100vh;
-    background: linear-gradient(45deg, #ffdddd, #ddddff);
-    overflow: hidden;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  #instructions {
-    position: fixed;
-    top: 20px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 10px 0;
-  }
-  
-  #phone-area {
-    margin-top: 100px;
-    text-align: center;
-  }
-  
-  #phone-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .input-box input {
-    width: 60px;
-    height: 60px;
-    font-size: 28px;
-    text-align: center;
-    background: white;
-    border: 2px solid #333;
-    border-radius: 8px;
-  }
-  
-  .dash {
-    font-size: 36px;
-    font-weight: bold;
-    margin: 0 10px;
-  }
-  
-  #puzzle-area {
-    position: fixed;
-    top: 150px;
-    background: white;
-    border: 2px solid #333;
-    padding: 20px;
-    border-radius: 10px;
-    z-index: 2000;
-    text-align: center;
-  }
-  
-  button, .puzzle-option {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
+  height: 100vh;
+  background: linear-gradient(45deg, #ffdddd, #ddddff);
+  overflow: hidden;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#instructions {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 0;
+}
+
+#phone-area {
+  margin-top: 100px;
+  text-align: center;
+}
+
+#phone-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.input-box input {
+  width: 80px;
+  height: 80px;
+  font-size: 36px;
+  text-align: center;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+.dash {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+#puzzle-area {
+  position: fixed;
+  top: 150px;
+  background: white;
+  border: 2px solid #333;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2000;
+  text-align: center;
+}
+
+#reset-area {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#reset-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #ffcccc;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+.submit-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #ccffcc;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+.puzzle-option {
+  margin: 10px;
+  padding: 20px 30px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.puzzle-option:hover {
+  transform: scale(1.1);
+}
+
+#puzzle-area {
+  position: fixed;
+  top: 150px;
+  background: white;
+  border: 2px solid #333;
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 2000;
+  text-align: center;
+  min-width: 300px;
+}
+
+.puzzle-option {
+  margin: 10px;
+  padding: 20px 30px;
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 2px solid #333;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.puzzle-option:hover {
+  transform: scale(1.1);
+}
+
+#puzzle-area input {
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 24px;
+  width: 80px;
+  text-align: center;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+#puzzle-area div {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background: blue;
+  border-radius: 50%;
+  margin: 20px auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+}
+#restart-button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 24px;
+  background-color: #ccffcc;
+  border: 2px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#restart-button:hover {
+  transform: scale(1.1);
+}

@@ -1,14 +1,20 @@
 const phoneForm = document.getElementById('phone-form');
 const puzzleArea = document.getElementById('puzzle-area');
+const resetButton = document.getElementById('reset-button');
 
 let digitsEntered = 0;
 const totalDigits = 10;
 
 createInput();
 
+resetButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  resetForm();
+});
+
 function createInput() {
   if (digitsEntered >= totalDigits) {
-    alert("Thank you! Your phone number has been entered!");
+    addSubmitButton();
     return;
   }
 
@@ -25,23 +31,38 @@ function createInput() {
   input.focus();
 
   input.addEventListener('input', () => {
-    if (input.value.length > 0) {
-      input.disabled = true;
-      digitsEntered++;
-
-      if (digitsEntered === 3 || digitsEntered === 6) {
-        const dash = document.createElement('div');
-        dash.className = 'dash';
-        dash.innerText = '-';
-        phoneForm.appendChild(dash);
-      }
-
-      if (digitsEntered < totalDigits) {
-        showPuzzle();
-      } else {
-        alert("Thank you! Your phone number has been entered!");
-      }
+    if (!/^[0-9]$/.test(input.value)) {
+      input.value = '';
+      return;
     }
+
+    input.disabled = true;
+    digitsEntered++;
+
+    if (digitsEntered === 3 || digitsEntered === 6) {
+      const dash = document.createElement('div');
+      dash.className = 'dash';
+      dash.innerText = '-';
+      phoneForm.appendChild(dash);
+    }
+
+    if (digitsEntered < totalDigits) {
+      showPuzzle();
+    } else {
+      addSubmitButton();
+    }
+  });
+}
+
+function addSubmitButton() {
+  const submitButton = document.createElement('button');
+  submitButton.type = 'button';
+  submitButton.innerText = 'Submit Number';
+  submitButton.className = 'submit-button';
+  phoneForm.appendChild(submitButton);
+
+  submitButton.addEventListener('click', () => {
+    showSuccessPopup();
   });
 }
 
@@ -52,7 +73,7 @@ function showPuzzle() {
   const puzzleType = Math.floor(Math.random() * 3);
 
   if (puzzleType === 0) {
-    // Puzzle 1: Click the circle
+
     const message = document.createElement('div');
     message.innerText = 'Click the circle to continue:';
     puzzleArea.appendChild(message);
@@ -69,7 +90,6 @@ function showPuzzle() {
     circle.addEventListener('click', completePuzzle);
 
   } else if (puzzleType === 1) {
-    // Puzzle 2: Solve tiny math
     const num1 = Math.floor(Math.random() * 5) + 1;
     const num2 = Math.floor(Math.random() * 5) + 1;
 
@@ -89,14 +109,12 @@ function showPuzzle() {
     });
 
   } else {
-    // Puzzle 3: Pick correct number
     const target = Math.floor(Math.random() * 10);
     const message = document.createElement('div');
     message.innerText = `Click the number ${target}:`;
     puzzleArea.appendChild(message);
 
     const options = [];
-
     options.push(target);
 
     while (options.length < 5) {
@@ -121,12 +139,47 @@ function showPuzzle() {
   }
 }
 
+
 function completePuzzle() {
   puzzleArea.style.display = 'none';
   createInput();
 }
 
-//shuffle
+function showSuccessPopup() {
+  const popup = document.createElement('div');
+  popup.id = 'success-popup';
+  popup.innerHTML = `
+    <h1>Congratulations!</h1>
+    <p>You have completed this annoying phone number form.</p>
+    <button id="restart-button">Restart</button>
+  `;
+  document.body.appendChild(popup);
+
+  popup.style.position = 'fixed';
+  popup.style.top = '0';
+  popup.style.left = '0';
+  popup.style.width = '100%';
+  popup.style.height = '100%';
+  popup.style.background = 'white';
+  popup.style.zIndex = '5000';
+  popup.style.display = 'flex';
+  popup.style.flexDirection = 'column';
+  popup.style.alignItems = 'center';
+  popup.style.justifyContent = 'center';
+  popup.style.fontSize = '2rem';
+
+  document.getElementById('restart-button').addEventListener('click', () => {
+    popup.remove();
+    resetForm();
+  });
+}
+
+function resetForm() {
+  phoneForm.innerHTML = '';
+  digitsEntered = 0;
+  createInput();
+}
+
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
